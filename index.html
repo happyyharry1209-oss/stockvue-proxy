@@ -1318,7 +1318,7 @@
         // ============================================================
 
         // ============ APP STATE ============
-        const PROXY_URL = 'http://localhost:3456';
+        const PROXY_URL = window.location.origin !== 'null' ? window.location.origin : 'http://localhost:3456';
         const FINNHUB_KEY = 'd8onjgpr01qn89hseo7gd8onjgpr01qn89hseo80';
         const TWELVEDATA_KEY = '62a552bd2683489cb26b414cd0c99af8';
         const STATE = {

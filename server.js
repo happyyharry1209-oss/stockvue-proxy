@@ -8,12 +8,15 @@ const express = require('express');
 const cors = require('cors');
 const https = require('https');
 const http = require('http');
+const path = require('path');
 
 const app = express();
-const PORT = 3456;
+const PORT = process.env.PORT || 3456;
 
 app.use(cors());
 app.use(express.json());
+// Serve static frontend files (index.html, etc.)
+app.use(express.static(path.join(__dirname)));
 
 // ============ Yahoo Finance Proxy ============
 app.get('/api/yahoo/chart/:symbol', (req, res) => {
