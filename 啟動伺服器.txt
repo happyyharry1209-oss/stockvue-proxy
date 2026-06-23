@@ -1,0 +1,2 @@
+cd "C:\Users\user\OneDrive\Desktop\Visual Studio Code\網頁\stock-monitor"
+npm start
